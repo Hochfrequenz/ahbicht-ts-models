@@ -1,0 +1,22 @@
+{
+  "name": "ahbicht-ts-models",
+  "version": "0.0.1",
+  "description": "Model classes for AHBicht",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hochfrequenz/ahbicht-ts-models.git"
+  },
+  "keywords": [
+    "ahbicht"
+  ],
+  "author": "Hochfrequenz Unternehmensberatung GmbH <info@hochfrequenz.de> (https://www.hochfrequenz.de/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hochfrequenz/ahbicht-ts-models/issues"
+  },
+  "homepage": "https://github.com/Hochfrequenz/ahbicht-ts-models#readme"
+}
