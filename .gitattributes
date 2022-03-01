@@ -1,2 +1,2 @@
-*.ts	text	eol=lf
+*.ts	text	eol=crlf
 *.md	text	eol=lf
