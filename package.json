@@ -2,7 +2,7 @@
   "name": "ahbicht-ts-models",
   "version": "0.0.8",
   "description": "Model classes for AHBicht",
-  "main": "src/index.d.ts",
+  "main": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
