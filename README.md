@@ -63,3 +63,20 @@ axios
 - click on "[Draft a new Release](https://github.com/Hochfrequenz/ahbicht-ts-models/releases/new)" in the right sidebar on Github
 - Choose a tag that will be pushed to the selected branch (should be main in most cases)
 - Autogenerate Release Notes
+
+## Detailed Information on the AHBicht Types
+
+Please refer to the official [AHBicht docs](https://ahbicht.readthedocs.io/en/latest/api/ahbicht.html).
+
+### Mappings
+
+- [`ConditionKeyConditionTextMapping`](https://ahbicht.readthedocs.io/en/latest/api/ahbicht.html?highlight=ConditionKeyConditionTextMapping#ahbicht.mapping_results.ConditionKeyConditionTextMapping)
+- [`PackageKeyConditionExpressionMapping`](https://ahbicht.readthedocs.io/en/latest/api/ahbicht.html?highlight=PackageKeyConditionExpressionMapping#ahbicht.mapping_results.PackageKeyConditionExpressionMapping)
+
+### Parsing Results & Helper
+
+- [`CategorizedKeyExtract`](https://ahbicht.readthedocs.io/en/latest/api/ahbicht.content_evaluation.html#module-ahbicht.content_evaluation.categorized_key_extract)
+
+### Evaluation Results
+
+- [`ContentEvaluationResult`](https://ahbicht.readthedocs.io/en/latest/api/ahbicht.content_evaluation.html?highlight=ContentEvaluationResult#ahbicht.content_evaluation.content_evaluation_result.ContentEvaluationResult)
