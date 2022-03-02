@@ -1,5 +1,7 @@
 # ahbicht-ts-models
 
+![AHBicht Logo](https://raw.githubusercontent.com/Hochfrequenz/ahbicht/main/docs/_static/ahbicht-logo.png | width=100 )
+
 This repository contains the NPM package [`ahbicht-ts-models`](https://www.npmjs.com/package/ahbicht-ts-models).
 The package contains the [AHBicht](https://github.com/Hochfrequenz/ahbicht) data model as TypeScript interfaces.
 
