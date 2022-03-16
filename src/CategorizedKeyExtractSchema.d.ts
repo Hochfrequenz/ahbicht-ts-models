@@ -13,11 +13,14 @@ export type PackageKeys1 = string;
 export type PackageKeys = PackageKeys1[];
 export type RequirementConstraintKeys1 = string;
 export type RequirementConstraintKeys = RequirementConstraintKeys1[];
+export type TimeConditionKeys1 = string;
+export type TimeConditionKeys = TimeConditionKeys1[];
 
 export interface CategorizedKeyExtractSchema {
   format_constraint_keys?: FormatConstraintKeys;
   hint_keys?: HintKeys;
   package_keys?: PackageKeys;
   requirement_constraint_keys?: RequirementConstraintKeys;
+  time_condition_keys?: TimeConditionKeys;
   [k: string]: unknown;
 }
