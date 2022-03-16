@@ -60,7 +60,7 @@ axios
 
 ## Release Workflow (CI/CD)
 
-- Update the source code (automatically for [`/src`](/src), manually for [`index.d.ts`](index.d.ts))
+- Update the source code (automatically for [`/src`](/src), manually for at least the version bump in [`index.d.ts`](index.d.ts))
 - click on "[Draft a new Release](https://github.com/Hochfrequenz/ahbicht-ts-models/releases/new)" in the right sidebar on Github
 - Choose a tag that will be pushed to the selected branch (should be main in most cases)
 - Autogenerate Release Notes
