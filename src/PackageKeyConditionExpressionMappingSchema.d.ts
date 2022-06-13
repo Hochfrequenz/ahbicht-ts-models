@@ -8,6 +8,7 @@
 export type EdifactFormat =
   | "APERAK"
   | "COMDIS"
+  | "CONTRL"
   | "IFTSTA"
   | "INSRPT"
   | "INVOIC"

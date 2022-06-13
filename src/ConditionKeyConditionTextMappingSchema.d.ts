@@ -10,6 +10,7 @@ export type ConditionText = string | null;
 export type EdifactFormat =
   | "APERAK"
   | "COMDIS"
+  | "CONTRL"
   | "IFTSTA"
   | "INSRPT"
   | "INVOIC"
