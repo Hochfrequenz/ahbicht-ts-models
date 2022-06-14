@@ -1,6 +1,6 @@
 {
   "name": "ahbicht-ts-models",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Model classes for AHBicht",
   "main": "index.d.ts",
   "scripts": {
