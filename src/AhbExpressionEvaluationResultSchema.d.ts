@@ -13,16 +13,18 @@ export type RequirementConstraintsFulfilled = boolean;
 export type RequirementIsConditional = boolean;
 
 export interface AhbExpressionEvaluationResultSchema {
-  format_constraint_evaluation_result?: {
-    error_message?: ErrorMessage;
-    format_constraints_fulfilled?: FormatConstraintsFulfilled;
-  };
-  requirement_constraint_evaluation_result?: {
-    format_constraints_expression?: FormatConstraintsExpression;
-    hints?: Hints;
-    requirement_constraints_fulfilled?: RequirementConstraintsFulfilled;
-    requirement_is_conditional?: RequirementIsConditional;
-  };
+  format_constraint_evaluation_result?: FormatConstraintEvaluationResultSchema;
+  requirement_constraint_evaluation_result?: RequirementConstraintEvaluationResultSchema;
   requirement_indicator?: string;
   [k: string]: unknown;
+}
+export interface FormatConstraintEvaluationResultSchema {
+  error_message?: ErrorMessage;
+  format_constraints_fulfilled?: FormatConstraintsFulfilled;
+}
+export interface RequirementConstraintEvaluationResultSchema {
+  format_constraints_expression?: FormatConstraintsExpression;
+  hints?: Hints;
+  requirement_constraints_fulfilled?: RequirementConstraintsFulfilled;
+  requirement_is_conditional?: RequirementIsConditional;
 }

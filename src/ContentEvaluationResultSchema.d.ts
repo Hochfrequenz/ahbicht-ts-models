@@ -24,10 +24,11 @@ export interface ContentEvaluationResultSchema {
   [k: string]: unknown;
 }
 export interface FormatConstraints {
-  [k: string]: {
-    error_message?: ErrorMessage;
-    format_constraint_fulfilled: FormatConstraintFulfilled;
-  };
+  [k: string]: EvaluatedFormatConstraintSchema;
+}
+export interface EvaluatedFormatConstraintSchema {
+  error_message?: ErrorMessage;
+  format_constraint_fulfilled: FormatConstraintFulfilled;
 }
 export interface Hints {
   [k: string]: Hints1;
