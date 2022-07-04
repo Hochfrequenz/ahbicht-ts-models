@@ -21,6 +21,7 @@ import axios from "axios";
 import {
   CategorizedKeyExtract,
   ContentEvaluationResult,
+  AhbExpressionEvaluationResult,
 } from "ahbicht-ts-models";
 axios
   .get("https://ahbicht.azurewebsites.net/api/CategorizedKeyExtract", {
@@ -52,8 +53,8 @@ axios
         }
       )
       .then(function (cerResponse) {
-        let contentEvaluationResult: ContentEvaluationResult = cerResponse.data;
-        console.log(contentEvaluationResult);
+        let ahbExpressionEvaluationResult: AhbExpressionEvaluationResult = cerResponse.data;
+        console.log(ahbExpressionEvaluationResult);
       });
   });
 ```
