@@ -21,6 +21,7 @@ import axios from "axios";
 import {
   CategorizedKeyExtract,
   ContentEvaluationResult,
+  AhbExpressionEvaluationResult,
 } from "ahbicht-ts-models";
 axios
   .get("https://ahbicht.azurewebsites.net/api/CategorizedKeyExtract", {
