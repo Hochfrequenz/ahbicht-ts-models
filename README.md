@@ -21,6 +21,7 @@ import axios from "axios";
 import {
   CategorizedKeyExtract,
   ContentEvaluationResult,
+  AhbExpressionEvaluationResult,
 } from "ahbicht-ts-models";
 axios
   .get("https://ahbicht.azurewebsites.net/api/CategorizedKeyExtract", {
@@ -52,8 +53,8 @@ axios
         }
       )
       .then(function (cerResponse) {
-        let contentEvaluationResult: ContentEvaluationResult = cerResponse.data;
-        console.log(contentEvaluationResult);
+        let ahbExpressionEvaluationResult: AhbExpressionEvaluationResult = cerResponse.data;
+        console.log(ahbExpressionEvaluationResult);
       });
   });
 ```
@@ -80,4 +81,5 @@ Please refer to the official [AHBicht docs](https://ahbicht.readthedocs.io/en/la
 
 ### Evaluation Results
 
+- [`AhbExpressionEvaluationResult`](https://ahbicht.readthedocs.io/en/latest/api/ahbicht.html?highlight=AhbExpressionEvaluationResult#ahbicht.evaluation_results.AhbExpressionEvaluationResult)
 - [`ContentEvaluationResult`](https://ahbicht.readthedocs.io/en/latest/api/ahbicht.content_evaluation.html?highlight=ContentEvaluationResult#ahbicht.content_evaluation.content_evaluation_result.ContentEvaluationResult)
