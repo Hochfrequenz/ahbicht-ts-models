@@ -52,8 +52,8 @@ axios
         }
       )
       .then(function (cerResponse) {
-        let contentEvaluationResult: ContentEvaluationResult = cerResponse.data;
-        console.log(contentEvaluationResult);
+        let ahbExpressionEvaluationResult: AhbExpressionEvaluationResult = cerResponse.data;
+        console.log(ahbExpressionEvaluationResult);
       });
   });
 ```
