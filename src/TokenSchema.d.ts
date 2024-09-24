@@ -5,9 +5,7 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type Type = Type1 & Type2;
-export type Type1 = boolean;
-export type Type2 = string;
+export type Type = boolean & string;
 export type Value = string | null;
 
 export interface TokenSchema {
