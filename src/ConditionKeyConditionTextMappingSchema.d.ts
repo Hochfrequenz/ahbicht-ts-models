@@ -24,6 +24,9 @@ export type EdifactFormat =
   | "REQOTE"
   | "PARTIN"
   | "UTILMD"
+  | "UTILMDG"
+  | "UTILMDS"
+  | "UTILMDW"
   | "UTILTS";
 
 export interface ConditionKeyConditionTextMappingSchema {

@@ -22,6 +22,9 @@ export type EdifactFormat =
   | "REQOTE"
   | "PARTIN"
   | "UTILMD"
+  | "UTILMDG"
+  | "UTILMDS"
+  | "UTILMDW"
   | "UTILTS";
 export type PackageExpression = string | null;
 export type PackageKey = string;
