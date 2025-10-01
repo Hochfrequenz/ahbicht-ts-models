@@ -5,19 +5,18 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type FormatConstraintKeys = string[];
-export type HintKeys = string[];
-export type PackageKeys = string[];
-export type RequirementConstraintKeys = string[];
-export type TimeConditionKeys = string[];
+export type FormatConstraintKeys1 = string;
+export type FormatConstraintKeys = FormatConstraintKeys1[];
+export type HintKeys1 = string;
+export type HintKeys = HintKeys1[];
+export type PackageKeys1 = string;
+export type PackageKeys = PackageKeys1[];
+export type RequirementConstraintKeys1 = string;
+export type RequirementConstraintKeys = RequirementConstraintKeys1[];
+export type TimeConditionKeys1 = string;
+export type TimeConditionKeys = TimeConditionKeys1[];
 
-/**
- * A Categorized Key Extract contains those condition keys that are contained inside an expression.
- * For expressions (that do not contain any unresolved package) it's possible to pre-generate all possible outcomes of
- * a content evaluation. CategorizedKeyExtract is also the answer to the question:
- * 'Which information do I need to provide in a ContentEvaluationResult in order to evaluate a given expression?'
- */
-export interface CategorizedKeyExtract {
+export interface CategorizedKeyExtractSchema {
   format_constraint_keys?: FormatConstraintKeys;
   hint_keys?: HintKeys;
   package_keys?: PackageKeys;
