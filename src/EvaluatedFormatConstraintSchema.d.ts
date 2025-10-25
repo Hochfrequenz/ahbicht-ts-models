@@ -8,8 +8,13 @@
 export type ErrorMessage = string | null;
 export type FormatConstraintFulfilled = boolean;
 
-export interface EvaluatedFormatConstraintSchema {
+/**
+ * This class is the base class of all evaluated format constraints. They are used in the context of the
+ * Mussfeldprüfung after the format constraints are evaluated to see if the format constraint expression is
+ * fulfilled or not.
+ */
+export interface EvaluatedFormatConstraint {
   error_message?: ErrorMessage;
-  format_constraint_fulfilled?: FormatConstraintFulfilled;
+  format_constraint_fulfilled: FormatConstraintFulfilled;
   [k: string]: unknown;
 }

@@ -7,32 +7,48 @@
 
 export type ErrorMessage = string | null;
 export type FormatConstraintFulfilled = boolean;
-export type Hints1 = string | null;
 export type Id = string | null;
 export type Packages = {
-  [k: string]: Packages1;
+  /**
+   * This interface was referenced by `undefined`'s JSON-Schema definition
+   * via the `patternProperty` "^\d+P$".
+   */
+  [k: string]: string;
 } | null;
-export type Packages1 = string;
-export type RequirementConstraints1 = string;
+/**
+ * Possible values to describe the state of a condition
+ * in the condition_fulfilled attribute of the ConditionNodes.
+ */
+export type ConditionFulfilledValue = "FULFILLED" | "UNFULFILLED" | "UNKNOWN" | "NEUTRAL";
 
-export interface ContentEvaluationResultSchema {
-  format_constraints?: FormatConstraints;
+/**
+ * A class that holds the results of a full content evaluation (meaning all hints, requirement constraints and
+ * format constraints have been evaluated)
+ */
+export interface ContentEvaluationResult {
+  format_constraints: FormatConstraints;
   hints?: Hints;
   id?: Id;
   packages?: Packages;
-  requirement_constraints?: RequirementConstraints;
+  requirement_constraints: RequirementConstraints;
   [k: string]: unknown;
 }
 export interface FormatConstraints {
-  [k: string]: EvaluatedFormatConstraintSchema;
+  [k: string]: EvaluatedFormatConstraint;
 }
-export interface EvaluatedFormatConstraintSchema {
+/**
+ * This class is the base class of all evaluated format constraints. They are used in the context of the
+ * Mussfeldprüfung after the format constraints are evaluated to see if the format constraint expression is
+ * fulfilled or not.
+ */
+export interface EvaluatedFormatConstraint {
   error_message?: ErrorMessage;
   format_constraint_fulfilled: FormatConstraintFulfilled;
+  [k: string]: unknown;
 }
 export interface Hints {
-  [k: string]: Hints1;
+  [k: string]: string | null;
 }
 export interface RequirementConstraints {
-  [k: string]: RequirementConstraints1;
+  [k: string]: ConditionFulfilledValue;
 }
