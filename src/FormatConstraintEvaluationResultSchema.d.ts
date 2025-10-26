@@ -8,8 +8,11 @@
 export type ErrorMessage = string | null;
 export type FormatConstraintsFulfilled = boolean;
 
-export interface FormatConstraintEvaluationResultSchema {
+/**
+ * A class for the result of the format constraint evaluation.
+ */
+export interface FormatConstraintEvaluationResult {
   error_message?: ErrorMessage;
-  format_constraints_fulfilled?: FormatConstraintsFulfilled;
+  format_constraints_fulfilled: FormatConstraintsFulfilled;
   [k: string]: unknown;
 }

@@ -7,13 +7,16 @@
 
 export type FormatConstraintsExpression = string | null;
 export type Hints = string | null;
-export type RequirementConstraintsFulfilled = boolean;
-export type RequirementIsConditional = boolean;
+export type RequirementConstraintsFulfilled = boolean | null;
+export type RequirementIsConditional = boolean | null;
 
-export interface RequirementConstraintEvaluationResultSchema {
+/**
+ * A class for the result of the requirement constraint evaluation.
+ */
+export interface RequirementConstraintEvaluationResult {
   format_constraints_expression?: FormatConstraintsExpression;
   hints?: Hints;
-  requirement_constraints_fulfilled?: RequirementConstraintsFulfilled;
-  requirement_is_conditional?: RequirementIsConditional;
+  requirement_constraints_fulfilled: RequirementConstraintsFulfilled;
+  requirement_is_conditional: RequirementIsConditional;
   [k: string]: unknown;
 }

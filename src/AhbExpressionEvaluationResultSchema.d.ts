@@ -9,22 +9,49 @@ export type ErrorMessage = string | null;
 export type FormatConstraintsFulfilled = boolean;
 export type FormatConstraintsExpression = string | null;
 export type Hints = string | null;
-export type RequirementConstraintsFulfilled = boolean;
-export type RequirementIsConditional = boolean;
+export type RequirementConstraintsFulfilled = boolean | null;
+export type RequirementIsConditional = boolean | null;
+export type RequirementIndicator = PrefixOperator | ModalMark;
+/**
+ * Operator which does not function to combine conditions, but as requirement indicator.
+ * It stands alone or in front of a condition expression. Please find detailed descriptions of the operators and their
+ * usage in the "Allgemeine Festlegungen".
+ * Note that with MaKo2022 introced 2022-04-01 the "O" and "U" prefix operators will be deprecated.
+ * Refer to the "Allgemeine Festlegungen" valid up to 2022-04-01 for deprecated "O" and "U".
+ */
+export type PrefixOperator = "X" | "O" | "U";
+/**
+ * A modal mark describes if information are obligatory or not. The German term is "Merkmal".
+ * The modal marks are defined by the EDI Energy group (see edi-energy.de → Dokumente → Allgemeine Festlegungen).
+ * The modal mark stands alone or before a condition expression.
+ * It can be the start of several requirement indicator expressions in one AHB expression.
+ */
+export type ModalMark = "MUSS" | "SOLL" | "KANN";
 
-export interface AhbExpressionEvaluationResultSchema {
-  format_constraint_evaluation_result?: FormatConstraintEvaluationResultSchema;
-  requirement_constraint_evaluation_result?: RequirementConstraintEvaluationResultSchema;
-  requirement_indicator?: string;
+/**
+ * A class for the result of an ahb expression evaluation.
+ */
+export interface AhbExpressionEvaluationResult {
+  format_constraint_evaluation_result: FormatConstraintEvaluationResult;
+  requirement_constraint_evaluation_result: RequirementConstraintEvaluationResult;
+  requirement_indicator: RequirementIndicator;
   [k: string]: unknown;
 }
-export interface FormatConstraintEvaluationResultSchema {
+/**
+ * A class for the result of the format constraint evaluation.
+ */
+export interface FormatConstraintEvaluationResult {
   error_message?: ErrorMessage;
-  format_constraints_fulfilled?: FormatConstraintsFulfilled;
+  format_constraints_fulfilled: FormatConstraintsFulfilled;
+  [k: string]: unknown;
 }
-export interface RequirementConstraintEvaluationResultSchema {
+/**
+ * A class for the result of the requirement constraint evaluation.
+ */
+export interface RequirementConstraintEvaluationResult {
   format_constraints_expression?: FormatConstraintsExpression;
   hints?: Hints;
-  requirement_constraints_fulfilled?: RequirementConstraintsFulfilled;
-  requirement_is_conditional?: RequirementIsConditional;
+  requirement_constraints_fulfilled: RequirementConstraintsFulfilled;
+  requirement_is_conditional: RequirementIsConditional;
+  [k: string]: unknown;
 }
