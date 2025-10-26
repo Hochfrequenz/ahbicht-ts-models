@@ -7,6 +7,9 @@
 
 export type ConditionKey = string;
 export type ConditionText = string | null;
+/**
+ * existing EDIFACT formats
+ */
 export type EdifactFormat =
   | "APERAK"
   | "COMDIS"
@@ -29,9 +32,12 @@ export type EdifactFormat =
   | "UTILMDW"
   | "UTILTS";
 
-export interface ConditionKeyConditionTextMappingSchema {
-  condition_key?: ConditionKey;
+/**
+ * maps a condition from a specified EDIFACT format onto a text as it is found in the AHB.
+ */
+export interface ConditionKeyConditionTextMapping {
+  condition_key: ConditionKey;
   condition_text?: ConditionText;
-  edifact_format?: EdifactFormat;
+  edifact_format: EdifactFormat;
   [k: string]: unknown;
 }

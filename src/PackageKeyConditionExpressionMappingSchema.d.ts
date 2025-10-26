@@ -5,6 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * existing EDIFACT formats
+ */
 export type EdifactFormat =
   | "APERAK"
   | "COMDIS"
@@ -29,9 +32,13 @@ export type EdifactFormat =
 export type PackageExpression = string | null;
 export type PackageKey = string;
 
-export interface PackageKeyConditionExpressionMappingSchema {
-  edifact_format?: EdifactFormat;
+/**
+ * maps a package key from a specified EDIFACT format onto a (not yet parsed) condition expression as it is found in
+ * the AHB.
+ */
+export interface PackageKeyConditionExpressionMapping {
+  edifact_format: EdifactFormat;
   package_expression?: PackageExpression;
-  package_key?: PackageKey;
+  package_key: PackageKey;
   [k: string]: unknown;
 }
