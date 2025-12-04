@@ -24,7 +24,7 @@ import {
   AhbExpressionEvaluationResult,
 } from "ahbicht-ts-models";
 axios
-  .get("https://ahbicht.azurewebsites.net/api/CategorizedKeyExtract", {
+  .get("https://ahbicht-backend-prod-fnfnegeqfwcffrhw.germanywestcentral-01.azurewebsites.net/CategorizedKeyExtract/", {
     params: {
       expression: "Muss ([2]O[3])[902][501]",
     },
@@ -44,7 +44,7 @@ axios
     };
     axios
       .post(
-        "https://ahbicht.azurewebsites.net/api/ParseExpression",
+        "https://ahbicht-backend-prod-fnfnegeqfwcffrhw.germanywestcentral-01.azurewebsites.net/ParseExpression/",
         contentEvaluationResult,
         {
           params: {
