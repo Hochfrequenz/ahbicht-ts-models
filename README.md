@@ -73,7 +73,7 @@ Notes on the release workflow:
 - **The tag is the only source of truth for the version.** Do not bump `package.json` by hand: the workflow derives the version from the tag and overwrites the field before publishing. The value committed in `package.json` is therefore stale by design.
 - A tag of the form `v1.2.3-rc.1` is published under the `next` dist-tag instead of `latest`, regardless of GitHub's "this is a pre-release" checkbox. Build metadata (`v1.2.3+build.4`) is rejected, because npm cannot represent it.
 - The release must point at a commit on `main`; releases cut from other branches are refused.
-- The run fails if nothing actually reached npm. Before this workflow existed that was silent: `v0.1.6` was released in December 2025, the run reported success, and npm stayed on `0.1.5`.
+- The run fails if nothing actually reached npm. That check is new; without it the failure was silent: `v0.1.6` was released in December 2025, its run reported success, and npm stayed on `0.1.5` — so `v0.1.6` was never published. Do not try to fix that by re-releasing `v0.1.6`: a release runs the workflow as it existed at the tag's commit, which for that tag predates this one. Cut a new tag instead.
 - Publishing is authorized by [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) via OIDC, not by a token. npm identifies this repository by the **workflow filename** and the **environment** (`npm-publish.yml` / `release`), so renaming the workflow file or changing the job's `environment:` breaks publishing until the trusted publisher is updated at [the package's access settings](https://www.npmjs.com/package/ahbicht-ts-models/access).
 
 ## Detailed Information on the AHBicht Types
