@@ -17,7 +17,7 @@ jobs:
     # must match the Environment recorded in the npm trusted publisher for this
     # package, or the OIDC token exchange fails with the (misleading)
     # "package not found". Give this environment required reviewers to make a
-    # publish need human approval - see issue #13.
+    # publish need human approval - see issue #14.
     environment: release
     # Required for npm OIDC trusted publishing
     permissions:
