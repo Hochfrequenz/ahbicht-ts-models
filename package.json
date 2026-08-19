@@ -1,5 +1,6 @@
 {
   "name": "ahbicht-ts-models",
+  "//": "This version is NOT the source of truth: it is overwritten at publish time from the release tag (see .github/workflows/npm-publish.yml). Do not bump it by hand - create a release tagged vX.Y.Z instead.",
   "version": "0.1.5",
   "description": "Model classes for AHBicht",
   "main": "index.d.ts",
